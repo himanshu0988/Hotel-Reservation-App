@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg1.jpg);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            background-color: #131212b5;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: white;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #146395;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #5dc5f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Page</h2>
+        <form action='./UserLogin' method="post">
+            User Id: <input type="text" name="userid"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

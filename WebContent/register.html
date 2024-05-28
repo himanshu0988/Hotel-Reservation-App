@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg1.jpg);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #131212b5;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            color:white;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #075075;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #21629f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Page</h2>
+        <form action='./Register'method="post">
+            User Id: <input type="text" name="userid"><br>
+            Name: <input type="text" name="name"><br>
+            Email: <input type="text" name="email"><br>
+            Password: <input type="password" name="password"><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
