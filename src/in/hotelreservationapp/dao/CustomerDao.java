@@ -23,8 +23,7 @@ public  class CustomerDao {
 			if(connection!=null) {
 			String query="Insert into Reservation (reid,`cuname`,mob,`roomnum`)values(?,?,?,?)";
 			pstm=connection.prepareStatement(query);
-			}
-			
+			} 
 			if(pstm!=null){
 				pstm.setInt(1,customer.getReservation_id());
 				pstm.setString(2,customer.getName());
@@ -33,7 +32,7 @@ public  class CustomerDao {
 				
 				int rowAffected=pstm.executeUpdate();
 				if(rowAffected==1)
-					return "success";
+				return "success";
 			}
 		  } catch (SQLException | IOException e) {
 			e.printStackTrace();
@@ -49,13 +48,12 @@ public  class CustomerDao {
 			pstm=connection.prepareStatement(query);
 			}
 			if(pstm!=null){
-				pstm.setInt(1, re_id);
-				resultset=pstm.executeQuery();
+			pstm.setInt(1, re_id);
+			resultset=pstm.executeQuery();
 			}
 			if(resultset!=null)
 				if(resultset.next()) {
 					customer = new Customer();
-					
 					customer.setReservation_id(resultset.getInt(1));
 					customer.setName(resultset.getString(2));
 					customer.setMobile(resultset.getString(3));
@@ -77,16 +75,14 @@ public  class CustomerDao {
 					pstm = connection.prepareStatement(sqlUpdateQuery);
 				}
 				if (pstm != null) {
-
 					pstm.setString(1, customer.getName());
 					pstm.setString(2, customer.getMobile());
 					pstm.setString(3, customer.getRoom_num());
 					pstm.setInt(4, customer.getReservation_id());
 
 					int rowAffected = pstm.executeUpdate();
-					if (rowAffected !=0) {
-						return "success";
-					}
+					if (rowAffected !=0) 
+					return "success";
 				}
 			} catch (SQLException | IOException e) {
 				e.printStackTrace();
@@ -103,11 +99,10 @@ public  class CustomerDao {
 			}
 			
 			if(pstm!=null) {
-				
 				pstm.setInt(1, id);
 				int rowAffected=pstm.executeUpdate();
 				if(rowAffected==1);
-					return "success";
+				return "success";
 		   }	
 		} catch (SQLException | IOException e) {
 			e.printStackTrace();
